@@ -5,9 +5,28 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>tudo2JSON</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   </head>
   <body>
-    <div id="app"></div>
+    <div id="app">
+      <div class="container">
+        <h2>tudo2JSON</h2>
+        <form method="post">
+          <input type="url" pattern="https://.*" class="input-recipe-url" placeholder="Ex.: https://www.tudogostoso.com.br/categorias/1004-carnes" required autocomplete="false" />
+
+          <button type="submit" class="get-recipe-button">Buscar</button>
+        </form>
+
+        <pre contenteditable class="json-area">{}</pre>
+        
+        <div class="info-area">
+          <p></p>
+        </div>
+      </div>
+    </div>
     <script type="module" src="/src/main.ts"></script>
   </body>
 </html>
